@@ -1,0 +1,148 @@
+---
+title: "SEMANA 9 MET. EST."
+author: "RAMOS MENDOZA MELANIE ANDREA"
+format: html
+editor: visual
+---
+
+## CASO 3: NÚMERO DE PACIENTES Y TIEMPO DE RESPUESTA
+
+```{r}
+#DATOS 
+x<-c(4,6,8,10,12)
+y<-c(2,3,4,5,7)
+```
+
+```{r}
+#COEFICIENTE DE CORRELACIÓN PEARSSON
+cor(x,y)
+```
+
+```{r}
+#OBTENIENDO COEFICIENTES DE A REGRESIÓN
+#MODELO
+modelo<-lm(y~x)
+coef(modelo)
+```
+
+```{r}
+#HAY UNA RELACIÓN MEDIANAMENTE FUERTEE
+
+#TIEMPO DE RESPUESTA PARA 14 PACIENTE ASIGNADOS
+predict(modelo,data.frame(x=14))
+```
+
+```{r}
+#gráfico 
+plot(x,y,main="Tiempo de respuesta para 14 pacientes asignados",
+xlab="pacientes asignados", ylab="tiempo de respuesta",pch=19)
+abline(modelo,lwd=2)
+```
+
+## CASO 4: CONSUMO DE AGUA Y PRESIÓN ARTERIAL
+
+```{r}
+#DATOS 
+x<-c(1.0,1.5,2.0,2.5,3.0)
+y<-c(145,142,138,134,130)
+```
+
+```{r}
+#COEFICIENTE DE CORRELACIÓN PEARSSON
+cor(x,y)
+```
+
+```{r}
+#OBTENIENDO COEFICIENTES DE A REGRESIÓN
+#MODELO
+modelo<-lm(y~x)
+coef(modelo)
+```
+
+```{r}
+#NO HAY UNA RELACIÓN FUERTEE
+
+#TIEMPO DE RESPUESTA PARA 14 PACIENTE ASIGNADOS
+predict(modelo,data.frame(x=3.5))
+```
+
+```{r}
+#gráfico 
+plot(x,y,main="consumo de agua y presión arteraial",
+xlab="consume de agua en litros", ylab="presión arterial",pch=19)
+abline(modelo,lwd=2)
+```
+
+## CASO 5: ADHERENCIA AL TRATAMIENDO Y NIVEL DE GLUCOSA
+
+```{r}
+#DATOS 
+x<-c(50,60,70,80,90)
+y<-c(190,175,165,150,135)
+```
+
+```{r}
+#COEFICIENTE DE CORRELACIÓN PEARSSON
+cor(x,y)
+```
+
+```{r}
+#OBTENIENDO COEFICIENTES DE A REGRESIÓN
+#MODELO
+modelo<-lm(y~x)
+coef(modelo)
+```
+
+```{r}
+#NO HAY UNA RELACIÓN FUERTEE
+```
+
+```{r}
+
+#TIEMPO DE RESPUESTA PARA 14 PACIENTE ASIGNADOS
+predict(modelo,data.frame(x=95))
+```
+
+```{r}
+#gráfico 
+plot(x,y,main="ADHERENCIA AL TRATAMIENDO Y NIVEL DE GLUCOSA",
+xlab="adherencia", ylab="glucosa",pch=19)
+abline(modelo,lwd=2)
+```
+
+## CASO 2: TIEMPO DE CUIDADO Y SATISFACCIÓN DEL PACIENTE
+
+```{r}
+#DATOS 
+x<-c(1,2,3,4,5)
+y<-c(60,68,75,82,90)
+```
+
+```{r}
+#COEFICIENTE DE CORRELACIÓN PEARSSON
+cor(x,y)
+```
+
+```{r}
+#OBTENIENDO COEFICIENTES DE A REGRESIÓN
+#MODELO
+modelo<-lm(y~x)
+coef(modelo)
+```
+
+```{r}
+#HAY UNA RELACIÓN MEDIANAMENTE FUERTEE
+```
+
+```{r}
+#TIEMPO DE RESPUESTA PARA 14 PACIENTE ASIGNADOS
+predict(modelo,data.frame(x=6))
+
+```
+
+```{r}
+#gráfico 
+plot(x,y,main="TIEMPO DE CUIDADO Y SATISFACCIÓN DEL PACIENTE",
+xlab="tiempo de cuidado en horas", ylab="satisfacción en porcentaje",pch=19)
+abline(modelo,lwd=2)
+```
